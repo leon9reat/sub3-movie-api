@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rv_tv_show"
+            tools:listitem="@layout/tv_show_item" />
+
+        <ProgressBar
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/progress_tv_show"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:indeterminate="true"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_gravity="center" />
+
+        <include
+            layout="@layout/layout_empty"
+            android:id="@+id/layout_empty"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <include
+            layout="@layout/layout_error"
+            android:id="@+id/layout_error"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
